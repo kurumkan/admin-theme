@@ -14,7 +14,8 @@
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "pre-commit": "lint",
   "keywords": [
@@ -32,6 +33,7 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.15",
     "babel-core": "^6.26.0",
     "babel-jest": "^22.2.2",
     "babel-loader": "^7.1.2",
