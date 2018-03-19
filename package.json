@@ -4,8 +4,18 @@
   "description": "admin panel written with react",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/ --config=.eslintrc",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack",
+    "prod": "NODE_ENV=production npm run build -p",
+    "frontend-dev": "webpack-dev-server",
+    "backend-dev": "nodemon server.js",
+    "deploy-heroku": "git push heroku master",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:update": "jest -u"
   },
+  "pre-commit": "lint",
   "keywords": [
     "react",
     "admin",
