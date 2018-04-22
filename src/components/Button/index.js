@@ -27,4 +27,10 @@ Button.propTypes = {
   active: bool
 };
 
+Button.defaultProps = {
+  type: 'primary',
+  shape: 'rectangle',
+  active: false
+};
+
 export default Button;

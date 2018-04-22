@@ -32,7 +32,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["./Demo/src","./src"]
+        "paths": ["./src", "./Demo/src"]
       }
     }
   }

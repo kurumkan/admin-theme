@@ -1,7 +1,58 @@
-@import "styles/variables";
+@import "styles/main";
 
 .action-group {
-  .button {
+  color: $color-light-blue;
+  background-color: $bg-color-light;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  box-shadow: 0 .8rem 2rem 0 rgba($color-black, .5);
+  display: flex;
 
+  &__item {
+    padding: .2rem 0;
+    &:not(:last-child) {
+      border-right: 1px solid $color-light-blue;
+    }
+
+    &-button {
+      &,
+      &:link,
+      &:visited {
+        margin: 0 3rem;
+        padding: .3rem 1.5rem;
+        text-transform: capitalize;
+        text-decoration: none;
+
+        display: inline-block;
+        font-size: $small-font-size;
+        color: $color-light-blue;
+        background-color: transparent;
+
+        border: none;
+        cursor: pointer;
+      }
+
+      &:hover {
+        transform: translateY(-3px);
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+    &-label {
+      display: inline-block;
+      margin-left: 1.5rem;
+      color: $color-white;
+    }
   }
 }

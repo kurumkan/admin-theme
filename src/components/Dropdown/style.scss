@@ -1,0 +1,65 @@
+@import "styles/main";
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__btn {
+    text-transform: uppercase;
+    color: $color-white;
+    min-width: 20rem;
+    border-radius: .7rem;
+    text-align: left;
+    padding: 1rem 1.6rem;
+    background-color: $color-primary;
+    font-size: $small-font-size;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    display: none;
+    position: absolute;
+    background-color: $color-primary;
+    min-width: 20rem;
+    box-shadow: 0 .8rem 1.6rem 0 rgba($color-black, .2);
+    z-index: 1;
+    border-bottom-left-radius: .7rem;
+    border-bottom-right-radius: .7rem;
+
+    &-item {
+      text-transform: uppercase;
+      color: $color-white;
+      padding: 1.2rem 1.6rem;
+      text-decoration: none;
+      display: block;
+      font-size: $small-font-size;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-primary-light;
+      }
+    }
+  }
+
+  &.open &__btn {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &.open &__list {
+    display: block;
+  }
+}

@@ -1,4 +1,4 @@
-@import "styles/variables";
+@import "styles/main";
 
 .button {
   color: $color-white;
@@ -10,7 +10,6 @@
 
     display: inline-block;
     padding: .75rem 1.5rem;
-    border-radius: .5rem;
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
