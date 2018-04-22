@@ -1,6 +1,7 @@
 @import "styles/variables";
 
 .button {
+  color: $color-white;
   &,
   &:link,
   &:visited {
@@ -8,8 +9,8 @@
     text-decoration: none;
 
     display: inline-block;
-    padding: 1.5rem 4rem;
-    border-radius: 10rem;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
@@ -19,21 +20,121 @@
   }
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black, .2);
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
 
+  &:active {
+    transform: translateY(-1px);
+  }
+
   &:active,
   &:focus {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     outline: none;
   }
 
-  &.primary {
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
 
+  // TYPES
+  &.primary {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary);
+    &::after {
+      background-color: $color-primary-light;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-primary-dark;
+    }
+  }
+  &.warning {
+    background-image: linear-gradient(to right, $color-warning-light, $color-warning);
+    &::after {
+      background-color: $color-warning-light;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-warning-dark;
+    }
+  }
+  &.success {
+    background-image: linear-gradient(to right, $color-success-light, $color-success);
+    &::after {
+      background-color: $color-success-light;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-success-dark;
+    }
+  }
+  &.info {
+    background-image: linear-gradient(to right, $color-info-light, $color-info);
+    &::after {
+      background-color: $color-info-light;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-info-dark;
+    }
+  }
+  &.danger {
+    background-image: linear-gradient(to right, $color-danger-light, $color-danger);
+    &::after {
+      background-color: $color-danger-light;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-danger-dark;
+    }
+  }
+  &.ghost {
+    background: transparent;
+    color: $color-white;
+    border: 1px solid $color-primary;
+    &::after {
+      background-color: $color-white;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+      box-shadow: 0 .5rem 2rem $color-primary-light;
+    }
+  }
+
+  // SHAPES
+  &.rectangle {
+    border-radius: .4rem;
+    &:after {
+      border-radius: .4rem;
+    }
+  }
+  &.semi-round {
+    border-radius: .9rem;
+    &:after {
+      border-radius: .9rem;
+    }
+  }
+  &.round {
+    border-radius: 100rem;
+    &:after {
+      border-radius: 100rem;
+    }
   }
 }

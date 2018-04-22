@@ -1,7 +1,23 @@
 // COLORS
-$color-primary-light: #7ed56f;
-$color-primary: #55c57a;
-$color-primary-dark: #28b485;
+$color-primary: #7659ff;
+$color-primary-light: adjust-hue($color-primary, 20deg);
+$color-primary-dark: adjust-hue($color-primary, -5deg);
+
+$color-warning: #ffa100;
+$color-warning-light: adjust-hue($color-warning, 20deg);
+$color-warning-dark: adjust-hue($color-warning, -5deg);
+
+$color-success: #00d977;
+$color-success-light: adjust-hue($color-success, 20deg);
+$color-success-dark: adjust-hue($color-success, -5deg);
+
+$color-info: #0088ff;
+$color-info-light: adjust-hue($color-info, 20deg);
+$color-info-dark: adjust-hue($color-info, -5deg);
+
+$color-danger: #ff386a;
+$color-danger-light: adjust-hue($color-danger, 20deg);
+$color-danger-dark: adjust-hue($color-danger, -5deg);
 
 $color-secondary-light: #ffb900;
 $color-secondary: #ff7730;
@@ -23,4 +39,4 @@ $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 $gutter-vertical-small: 6rem;
 
-$default-font-size: 1.6rem;
+$default-font-size: 1.2rem;

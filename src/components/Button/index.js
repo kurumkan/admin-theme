@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, bool } from 'prop-types';
 import classNames from 'classnames';
 import validatePropTypes from 'utils/validatePropTypes';
 import './style.scss';
 
-const Button = ({ onClick, type, size, active, children }) => {
-  const classes = classNames('button', type, size);
+const Button = ({ onClick, type, shape, size, active, children }) => {
+  const classes = classNames('button', type, size, shape);
   if (active) {
     classes.push('active');
   }
@@ -20,10 +20,11 @@ const Button = ({ onClick, type, size, active, children }) => {
 }
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  size: validatePropTypes('size'),
+  onClick: func.isRequired,
   type: validatePropTypes('type'),
-  active: PropTypes.bool
+  shape: validatePropTypes('shape'),
+  size: validatePropTypes('size'),
+  active: bool
 };
 
 export default Button;
