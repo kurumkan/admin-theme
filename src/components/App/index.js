@@ -1,11 +1,10 @@
 import React from 'react';
-import Button from 'components/Button';
-import './style.scss';
+import 'styles/main.scss';
 
-const Home = ({ children }) => (
-  <div className="container">
+const App = ({ children }) => (
+  <div className="app">
     {children}
   </div>
 );
 
-export default Home;
+export default App;

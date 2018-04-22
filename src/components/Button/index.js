@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import validatePropTypes from 'utils/validatePropTypes';
+import './style.scss';
 
 const Button = ({ onClick, type, size, active, children }) => {
   const classes = classNames('button', type, size);
