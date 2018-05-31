@@ -1,4 +1,4 @@
-@import "styles/main";
+@import 'styles/main';
 
 .button {
   color: $color-white;
@@ -9,7 +9,7 @@
     text-decoration: none;
 
     display: inline-block;
-    padding: .75rem 1.5rem;
+    padding: 1.5rem 3rem;
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
@@ -119,15 +119,15 @@
 
   // SHAPES
   &.rectangle {
-    border-radius: .4rem;
+    border-radius: .5rem;
     &:after {
-      border-radius: .4rem;
+      border-radius: .5rem;
     }
   }
   &.semi-round {
-    border-radius: .9rem;
+    border-radius: 1rem;
     &:after {
-      border-radius: .9rem;
+      border-radius: 1rem;
     }
   }
   &.round {

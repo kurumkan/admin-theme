@@ -3,7 +3,7 @@
 .action-group {
   color: $color-light-blue;
   background-color: $bg-color-light;
-  padding: 1.25rem;
+  padding: 2.25rem;
   border-radius: .5rem;
   box-shadow: 0 .8rem 2rem 0 rgba($color-black, .5);
   display: flex;
@@ -24,7 +24,7 @@
         text-decoration: none;
 
         display: inline-block;
-        font-size: $small-font-size;
+        font-size: $default-font-size;
         color: $color-light-blue;
         background-color: transparent;
 
